@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Através do Prisma</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 
@@ -31,7 +31,7 @@
             player = new YT.Player('player', {
                 height: '390',
                 width: '640',
-                videoId: '0yeJpMLPlEo',
+                videoId: 'Gy872HaeDRQ',
                 playerVars: {
                     autoplay: 'true',
                     start: start,
@@ -41,24 +41,6 @@
             });
         }
 
-        // 4. The API will call this function when the video player is ready.
-        function onPlayerReady(event) {
-            event.target.playVideo();
-        }
-
-        // 5. The API calls this function when the player's state changes.
-        //    The function indicates that when playing a video (state=1),
-        //    the player should play for six seconds and then stop.
-        var done = false;
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING && !done) {
-                setTimeout(stopVideo, 6000);
-                done = true;
-            }
-        }
-        function stopVideo() {
-            player.stopVideo();
-        }
     </script>
 
 </body>
