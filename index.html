@@ -26,6 +26,7 @@
         var urlParams = new URLSearchParams(window.location.search);
         var start = urlParams.get('start');
         var end = urlParams.get('end');
+        var id =urlParams.get('id');
         
 
         // 3. This function creates an <iframe> (and YouTube player)
@@ -35,7 +36,7 @@
             player = new YT.Player('player', {
                 height: '480',
                 width: '960',
-                videoId: 'f56BEvxCxX4',
+                videoId: id,
                 playerVars: {
                     autoplay: 'true',
                     start: start,
