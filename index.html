@@ -6,10 +6,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Através do Prisma</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="player"></div>
+
+    <div class="flex-container">
+        <div id="player"></div>
+    </div>
 
     <script>
         // 2. This code loads the IFrame Player API code asynchronously.
@@ -29,8 +33,8 @@
         var player;
         function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
-                height: '390',
-                width: '640',
+                height: '480',
+                width: '960',
                 videoId: 'Gy872HaeDRQ',
                 playerVars: {
                     autoplay: 'true',
